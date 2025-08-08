@@ -1,42 +1,74 @@
-# Netflix Content Classification
+# 🎬 Netflix Content Classification
 
-### Project Overview
+## 📌 Project Overview
+This project builds a **machine learning model** to classify Netflix content as either a **Movie** or a **TV Show**.  
+By analyzing a dataset of Netflix titles, we created a robust classifier for the fictional **"Streamlytics"** platform — improving content organization, enhancing user filtering, and providing insights for content strategy.
 
-This project focuses on building a machine learning model to automatically classify Netflix content as either a movie or a TV show. By analyzing a dataset of Netflix titles, we developed a robust classification model for the fictional "Streamlytics" platform. This solution can be used to improve content organization, enhance user experience through better filtering, and provide valuable insights for content strategy.
+---
 
-### Methodology
+## 🔍 Methodology
+We followed a standard **Data Science Pipeline**:
 
-The project followed a standard data science pipeline:
+1. **Data Cleaning & Preprocessing**
+   - Handled missing values
+   - Converted data types
+   - Cleaned `description` column text
 
-- **Data Cleaning and Preprocessing:** Handled missing values, converted data types, and cleaned the textual data in the `description` column.
-- **Exploratory Data Analysis (EDA):** Discovered key insights into the distribution of content types, genres, ratings, and release years. A significant class imbalance was identified, with movies being the dominant content type.
-- **Feature Engineering:** Text data was vectorized using TF-IDF, and dimensionality reduction was applied using PCA. Other categorical features like `rating` and `country` were encoded.
-- **Handling Imbalance:** The SMOTE (Synthetic Minority Over-sampling Technique) algorithm was used to balance the training data, ensuring the model could effectively learn from the minority class (TV Shows).
-- **Modeling:** We trained and tuned several classification models, including Logistic Regression, Random Forest, and Gradient Boosting.
-- **Evaluation:** Model performance was evaluated using a comprehensive set of metrics including Accuracy, Precision, Recall, and F1-Score, with a specific focus on the minority class.
+2. **Exploratory Data Analysis (EDA)**
+   - Visualized distributions of content types, genres, ratings, release years
+   - Identified significant **class imbalance** (movies dominate dataset)
 
-### Results and Key Findings
+3. **Feature Engineering**
+   - Vectorized text using **TF-IDF**
+   - Reduced dimensionality with **PCA**
+   - Encoded categorical features (`rating`, `country`)
 
-The **Tuned Random Forest Classifier** emerged as the best-performing model, achieving exceptional results:
+4. **Handling Class Imbalance**
+   - Used **SMOTE** to oversample TV Shows for balanced training
 
-| Metric                | Score (TV Shows) |
-|-----------------------|------------------|
-| **Precision** | 0.99             |
-| **Recall** | 1.00             |
-| **F1-Score** | 1.00             |
-| **Overall Accuracy** | 0.997            |
+5. **Modeling**
+   - Trained Logistic Regression, Random Forest, Gradient Boosting
+   - Hyperparameter tuning for optimal performance
 
-The high precision and recall for the minority class (TV Shows) are particularly significant, demonstrating the model's ability to reliably identify all TV show content without misclassifying movies. This makes the model highly suitable for deployment in a production environment.
+6. **Evaluation**
+   - Metrics: Accuracy, Precision, Recall, F1-Score
+   - Focus on performance for minority class (TV Shows)
 
-### Conclusion
+---
 
-This project successfully demonstrates the application of machine learning to a practical business problem. The developed model is a powerful tool for Streamlytics, capable of automating content categorization, enhancing user experience through accurate filters, and providing data-driven insights for content acquisition. The project showcases skills in data preprocessing, handling class imbalance, model tuning, and performance evaluation, making it a valuable addition to a data science portfolio.
+## 🏆 Results
+**Tuned Random Forest Classifier** delivered outstanding performance:
 
-### Technologies Used
+| Metric (TV Shows)   | Score |
+|---------------------|-------|
+| Precision           | 0.99  |
+| Recall              | 1.00  |
+| F1-Score            | 1.00  |
+| **Overall Accuracy**| 0.997 |
 
--   Python
--   Pandas
--   Scikit-learn
--   Numpy
--   Matplotlib
--   Seaborn
+✅ **High precision & recall** for TV Shows → minimal misclassification and reliable detection.
+
+---
+
+## 📌 Conclusion
+- **Business Impact:** Automates Netflix content categorization for **Streamlytics**  
+- **User Experience:** More accurate filters for movies/TV shows  
+- **Data-Driven Decisions:** Supports acquisition & strategy with reliable classifications
+
+---
+
+## ⚙️ Technologies Used
+- Python
+- Pandas
+- NumPy
+- Scikit-learn
+- Matplotlib
+- Seaborn
+
+---
+
+## 📂 How to Run
+1. Clone this repository:
+   ```bash
+   git clone https://github.com/shibamdutta99/netflix-content-analysis.git
+   cd netflix-content-analysis
